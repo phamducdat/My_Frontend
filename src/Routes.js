@@ -49,6 +49,13 @@ import ListStudent from "./component/student/liststudent";
 import DeleteStudent from "./component/student/deletestudent";
 import UpdateStudent from "./component/student/updatestudent";
 
+import CreateShippingOder from "./component/shippingorder/CreateOrder";
+import ListShippingOrder from "./component/shippingorder/AddressSelection";
+import DateTimePicker from "./component/shippingorder/DateTimePickers";
+
+
+
+
 
 
 function Routes(props) {// props nay tu parent transfer vao
@@ -65,6 +72,34 @@ function Routes(props) {// props nay tu parent transfer vao
       />
       
       
+      <PrivateRouteWithLayout
+      component={CreateShippingOder}  //props
+      layout={Layout}          //props
+      isAuthenticated={props.isAuthenticated} // props
+      //isAuthenticated={true}
+      //exact                                   // props
+      path="/shippingOrder/create"                    // props
+    />
+
+<PrivateRouteWithLayout
+      component={ListShippingOrder}  //props
+      layout={Layout}          //props
+      isAuthenticated={props.isAuthenticated} // props
+      //isAuthenticated={true}
+      //exact                                   // props
+      path="/shippingOrder/lists"                    // props
+    />
+
+
+<PrivateRouteWithLayout
+      component={DateTimePicker}  //props
+      layout={Layout}          //props
+      isAuthenticated={props.isAuthenticated} // props
+      //isAuthenticated={true}
+      //exact                                   // props
+      path="/shippingOrder/dateTimePicker"                    // props
+    />
+
       
       <PrivateRouteWithLayout
       component={CreateStudent}  //props
